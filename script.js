@@ -7,7 +7,7 @@ if ('webkitSpeechRecognition' in window) {
         var transcript = event.results[0][0].transcript;
         document.getElementById('voiceResult').innerHTML = '<p>Orden detectada: ' + transcript + '</p>';
     };
-
+// Verifica si el navegador soporta el reconocimiento de voz
     recognition.onerror = function(event) {
         console.error('Error en el reconocimiento de voz: ' + event.error);
     };
